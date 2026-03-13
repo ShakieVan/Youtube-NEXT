@@ -1,19 +1,28 @@
-# AGENTS.md – YouTube WebView Wrapper App (Android)
+# AGENTS.md – YouTube App (Android)
 
 ## Ziel
 Eine Android-App, die die **Desktop-Version von YouTube** in einer für **Touch optimierten** WebView darstellt, mit folgenden Funktionen:
-- **Pseudo-Fullscreen mit Pinch-to-Zoom**
+- **Fullscreen-Video mit Pinch-to-Zoom und "Tilt" des Gerätes in Querformat**
+- **Alle Features der Youtube Desktop-Browser-Version**
+  -- Kommentare schreiben, ändern, löschen
+  -- Audiospuren auswählen, wenn angeboten (z.B. für Übersetzungen)
+  -- Untertitel (incl. Übersetzungsmöglichkeit)
+  -- Videoqualität
+  -- Geschwindigkeit
+  -- Gleichbleibende Lautstärke
 - **Tabs** ähnlich dem Samsung Browser
 - **Automatisches Öffnen von YouTube-Links** in der App
-- **Login speichern** (dauerhaft eingeloggt bleiben)
-- **Picture-in-Picture (PiP)**, wenn vom Player unterstützt
+- **Login speichern**
+  -- dauerhaft eingeloggt bleiben
+  -- Multiple Accounts (Accounts zwischen denen man hin- und herschalten kann)
+  -- LoggedIn-Switch (Einfach zwischen "eingeloggtem" und "nicht eingeloggt" hin- und herschalten; wohlmöglich in Zusammenhang mit den "Multiple Accounts")
 - **Geringerer Akkuverbrauch** als die offizielle YouTube-App
 
 ---
 
 ## Architektur
 - **Sprache:** Kotlin
-- **Min SDK:** 26 (Android 8.0)
+- **Min SDK:** 29 (Android 10.0)
 - **Target SDK:** 34+
 - **UI-Komponenten:** Android WebView + TabLayout + ViewPager2
 - **Speicher:** Persistente Cookies + DOM Storage
